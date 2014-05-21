@@ -76,3 +76,14 @@ describe 'deleting a restaurant' do
     expect(page).to have_content 'Deleted successfully'
   end
 end
+
+describe 'fancy button' do
+  before { Restaurant.create(name: 'KFC', address: '1 High St, London', cuisine: 'Chicken') }
+
+  xit 'show Hello World', js: true do
+    visit '/restaurants'
+    click_button 'Test'
+
+    expect(page).to have_content 'Hello world'
+  end
+end
