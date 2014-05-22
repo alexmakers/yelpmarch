@@ -3,7 +3,6 @@ $(document).ready(function(){
     event.preventDefault();
     var reviewList = $(this).siblings('ul');
     var currentRestaurant = $(this).parent();
-    console.log(currentRestaurant);
 
     $.post($(this).attr('action'), $(this).serialize(), function(review){
       var newReview = Mustache.render($('#review_template').html(), review);
